@@ -22,7 +22,7 @@ data.forEach(row => {
     }else{
         row['isUnderAge']=false
     }
-    row['Date']=new Date(Number(dateValue[2]),Number(dateValue[1])-1,1+Number(dateValue[0]));
+    row['Date']=new Date(Number(dateValue[2]),Number(dateValue[1])-1,Number(dateValue[0]));
   });
   
 
