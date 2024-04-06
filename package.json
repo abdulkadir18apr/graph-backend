@@ -1,7 +1,7 @@
 {
   "name": "data-vizuializer",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "build": "parcel build index.js",
     "start": "node index.js",
