@@ -15,13 +15,14 @@ const data = XLSX.utils.sheet_to_json(sheet,{raw:false});
 
 data.forEach(row => {
     const dataValue = row['Age'];
-    const dateValue=row['Day'];
+    const dateValue=row['Day'].split("/");
+
     if(dataValue==='15-25'){
         row['isUnderAger']=true
     }else{
         row['isUnderAge']=false
     }
-    row['Date']=new Date();
+    row['Date']=new Date(Number(dateValue[2]),Number(dateValue[1])-1,1+Number(dateValue[0]));
   });
   
 
